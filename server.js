@@ -23,5 +23,6 @@ app.put('/hobbies', mainCtrl.postHobbies);
 app.put('/occupations', mainCtrl.postOccupations);
 app.get('/skills', mainCtrl.getSkills);
 app.post('/skills', middleware.generateId, mainCtrl.postSkills);
+app.get('/secrets/:username/:pin', middleware.verifyUser, mainCtrl.getSecret)
 
 app.listen(3000,()=>console.log('Listening on port 3000...'));

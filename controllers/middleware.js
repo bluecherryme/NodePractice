@@ -19,6 +19,14 @@ module.exports = {
   generateId : (req,res,next)=>{
       req.id = skills.length+1;
       next();
+  },
+
+  verifyUser : (req,res,next)=>{
+    if(req.params.username === 'jojo' && req.params.pin === '1234'){
+        next();
+    } else{
+        res.status(400).json('access denied');
+    }
   }
 
 

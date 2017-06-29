@@ -1,5 +1,6 @@
 var user = require('../user.js');
 var skills = require('../skillz.js');
+var secrets = require('../secrets');
 
 module.exports = {
 
@@ -107,6 +108,10 @@ postSkills: function(req,res){
         experience: req.body.experience
     });
     res.status(200).json(skills);
+},
+
+getSecret: function(req,res){
+    res.status(200).json(secrets);
 }
 
 
