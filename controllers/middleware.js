@@ -1,3 +1,5 @@
+var skills = require('./../skillz');
+
 module.exports = {
 
     addHeaders: function(req, res, next) {
@@ -12,6 +14,11 @@ module.exports = {
     });
 
     next();
+  },
+
+  generateId : (req,res,next)=>{
+      req.id = skills.length+1;
+      next();
   }
 
 

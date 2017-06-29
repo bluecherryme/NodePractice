@@ -1,7 +1,7 @@
 var user = {
   name: 'Jo Krill',
   location: 'Nowhere',
-  occupations: ['gardener','Secret Agent', 'dog walker'],
+  occupations: ['Gardener','Secret Agent', 'Dog Walker'],
   hobbies: [
     {
       name: 'golf',
@@ -13,7 +13,7 @@ var user = {
     },
     {
       name: 'hunting',
-      type: 'indoors'
+      type: 'outdoors'
     }
   ],
   family: [

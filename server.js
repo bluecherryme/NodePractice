@@ -15,5 +15,13 @@ app.get('/hobbies',mainCtrl.getHobbies);
 app.get('/hobbies/:type',mainCtrl.getHobbiesType);
 app.get('/family',mainCtrl.getFamily);
 app.get('/family/:gender',mainCtrl.getFamilyGender);
+app.get('/restaurants',mainCtrl.getRestaurants);
+app.get('/restaurants/:name',mainCtrl.getRestaurantsName);
+app.put('/name', mainCtrl.putName);
+app.put('/location',mainCtrl.putLocation);
+app.put('/hobbies', mainCtrl.postHobbies);
+app.put('/occupations', mainCtrl.postOccupations);
+app.get('/skills', mainCtrl.getSkills);
+app.post('/skills', middleware.generateId, mainCtrl.postSkills);
 
 app.listen(3000,()=>console.log('Listening on port 3000...'));
